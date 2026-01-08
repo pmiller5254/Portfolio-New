@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prince Miller | Engineer & Educator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Default: Cyber (Black/Green) */
+        --void: #000000;
+        --slab: #0a0a0a;
+        --accent: #bef264;
+        --accent-alt: #6366f1;
+        --text-primary: #ffffff;
+        --text-secondary: rgba(255, 255, 255, 0.5);
+        --text-tertiary: rgba(255, 255, 255, 0.1);
+        --border: rgba(255, 255, 255, 0.08);
+        --shadow: rgba(0, 0, 0, 0.8);
+        --accent-glow: rgba(190, 242, 100, 0.3);
+      }
+
+      [data-theme='silver'] {
+        --void: #f1f5f9;
+        --slab: #ffffff;
+        --accent: #2563eb;
+        --accent-alt: #0ea5e9;
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --text-tertiary: #cbd5e1;
+        --border: rgba(15, 23, 42, 0.1);
+        --shadow: rgba(15, 23, 42, 0.15);
+        --accent-glow: rgba(37, 99, 235, 0.2);
+      }
+
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: var(--void);
+        color: var(--text-primary);
+        overflow-x: hidden;
+        transition: background-color 0.5s ease, color 0.5s ease;
+      }
+      .mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .glass-slab {
+        background: var(--slab);
+        border: 1px solid var(--border);
+        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+        transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+      }
+      .glow-text {
+        text-shadow: 0 0 20px var(--accent-glow);
+      }
+      .grain {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 50;
+      }
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--text-tertiary);
+        border-radius: 10px;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "recharts": "https://esm.sh/recharts@^3.6.0",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+        "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div class="grain"></div>
+    <div id="root"></div>
+  </body>
+</html>
